@@ -1,0 +1,26 @@
+  Frame    r_f (m) (Cam 1)    v_f (m/s) (Cam 1)    r_p (m) (Cam 1)    v_p (m/s) (Cam 1)    r_f (m) (Cam 2)    v_f (m/s) (Cam 2)    r_p (m) (Cam 2)    v_p (m/s) (Cam 2)
+      0                nan                  nan                nan                  nan          0.0616267             0.486009                nan                  nan
+      1                nan                  nan                nan                  nan          0.0636517             0.748713                nan                  nan
+      2                nan                  nan                nan                  nan          0.067866              1.02094                 nan                  nan
+      3                nan                  nan                nan                  nan          0.0721596             1.05571                 nan                  nan
+      4                nan                  nan                nan                  nan          0.0766635             1.08747                 nan                  nan
+      5                nan                  nan                nan                  nan          0.0812218             1.11524                 nan                  nan
+      6                nan                  nan                nan                  nan          0.0859572             1.14387                 nan                  nan
+      7                nan                  nan                nan                  nan          0.0907541             1.18321                 nan                  nan
+      8                nan                  nan                nan                  nan          0.0958173             1.23478                 nan                  nan
+      9                nan                  nan                nan                  nan          0.101044              1.26266                 nan                  nan
+     10                nan                  nan                nan                  nan          0.106339              1.2936                  nan                  nan
+     11                nan                  nan                nan                  nan          0.111824              1.32552                 nan                  nan
+     12                nan                  nan                nan                  nan          0.117385              1.34194                 nan                  nan
+     13                nan                  nan                nan                  nan          0.123007              1.37563                 nan                  nan
+     14                nan                  nan                nan                  nan          0.128849              1.43887                 nan                  nan
+     15                nan                  nan                nan                  nan          0.134997              1.52988                 nan                  nan
+     16                nan                  nan                nan                  nan          0.141598              1.67509                 nan                  nan
+     17                nan                  nan                nan                  nan          0.148956              1.84754                 nan                  nan
+     18                nan                  nan                nan                  nan          0.156994              1.96815                 nan                  nan
+     19                nan                  nan                nan                  nan          0.165358              2.04786                 nan                  nan
+     20                nan                  nan                nan                  nan          0.17406               2.11901                 nan                  nan
+     21                nan                  nan                nan                  nan          0.183016              2.14264                 nan                  nan
+     22                nan                  nan                nan                  nan          0.191915              2.13123                 nan                  nan
+     23                nan                  nan                nan                  nan          0.200776              2.10541                 nan                  nan
+     24                nan                  nan                nan                  nan          0.20946               2.08412                 nan                  nan

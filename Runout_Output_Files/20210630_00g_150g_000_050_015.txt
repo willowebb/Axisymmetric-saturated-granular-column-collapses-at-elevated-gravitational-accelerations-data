@@ -1,0 +1,17 @@
+  Frame    r_f (m) (Cam 1)    v_f (m/s) (Cam 1)    r_p (m) (Cam 1)    v_p (m/s) (Cam 1)    r_f (m) (Cam 2)    v_f (m/s) (Cam 2)    r_p (m) (Cam 2)    v_p (m/s) (Cam 2)
+      0          0.0629138              1.40268                nan                  nan          0.0614325              0.93725                nan                  nan
+      1          0.0687583              1.6226                 nan                  nan          0.0653377              1.39097                nan                  nan
+      2          0.0764355              1.89495                nan                  nan          0.0730239              1.91767                nan                  nan
+      3          0.0845495              1.90625                nan                  nan          0.0813182              2.00173                nan                  nan
+      4          0.092321               1.75556                nan                  nan          0.089705               2.00114                nan                  nan
+      5          0.0991792              2.2041                 nan                  nan          0.0979944              2.03236                nan                  nan
+      6          0.110688               3.4748                 nan                  nan          0.106641               2.34156                nan                  nan
+      7          0.128136               4.06536                nan                  nan          0.117507               2.97946                nan                  nan
+      8          0.144566               3.59443                nan                  nan          0.13147                3.49329                nan                  nan
+      9          0.158089               3.22244                nan                  nan          0.146618               3.63484                nan                  nan
+     10          0.17142                3.16571                nan                  nan          0.16176                3.56773                nan                  nan
+     11          0.18447                2.8095                 nan                  nan          0.176349               3.26477                nan                  nan
+     12          0.194833               2.57336                nan                  nan          0.188967               2.83904                nan                  nan
+     13          0.205915               2.70734                nan                  nan          0.200008               2.19643                nan                  nan
+     14          0.217394               2.7549                 nan                  nan          0.20727                1.9318                 nan                  nan
+     15        nan                    nan                      nan                  nan          0.216106               2.12059                nan                  nan
