@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10912850.svg)](https://doi.org/10.5281/zenodo.10912850)
 # PhD Project Data Repository
 ## "Axisymmetric Saturated Granular Column Collapses at Elevated Gravitational Accelerations" by William Webb
 
