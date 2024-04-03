@@ -1,76 +1,58 @@
-# Git + GitHub As A Platform For Reproducible Research 
+# PhD Project Data Repository
+## "Axisymmetric Saturated Granular Column Collapses at Elevated Gravitational Accelerations" by William Webb
 
-## Overview
-This repository sets out the skeleton of an organizational structure used for scientific research. It loosely follows what I have used for several of my research projects and I hope it inspires you to conduct your research in an open, reproducible, and honest manner.
+### Overview
+Welcome to the online repository for William Webb's PhD project. This repository contains all the video data generated and used throughout the duration of the project. Below is an outline of the data included and how it's organized.
 
-## How to Use
-To use this template for your research, fork this repository, change the name
-to something descriptive for your project, and adjust the licensing as you
-see fit.
+### Testcode Description
+The test-specific files within this repository follow a standard naming convention. An example of how these files are titled is `20210914_08g_010w_050_050_005_1.extension`.
+This naming convention can be decoded as Date_Grainprop_Fluidprop_Grainheight_Fluidheight_N_Cam where each term separated by an underscore is defined below:
 
-To use this repository for your own research, simply click "Use this template" 
-at the top of this page
+- **Date**: The date on which the test was undertaken (YYYYMMDD format).
+- **Grainprop**: Diameter (mm) and material of the inertial granular phase (e.g., glass (g) beads).
+- **Fluidprop**: The viscosity of the fluid with respect to water (i.e. 010 refers to water while 050 refers to a solution 5 times more viscous than water) followed by the type of fluid. w stands for water, g refers to a glycerol-water mixture, and k refers to the tests conducted with a kaolin suspension. For the case of the kaolin suspension tests where the fluid's behavior is non-Newtonian, the number prior to the 'k' refers to the concentration of kaolin fines by mass relative to water (i.e. 020 refers to a kaolin mass concentration of 20%).
+- **Grainheight**: Height of the granular phase (mm).
+- **Fluidheight**: Height of the fluid phase (mm).
+- **N**: Gravitational scale factor.
+- **Cam**: Camera position (1 for upstream flow side, 2 for downstream flow side).
 
-> :warning: :warning: :warning: I wouldn't advise forking this repository. As you can only fork a given repository once, there is little utility in forking this repo if you hope to use it again in your future projects :warning: :warning: :warning:
+### Data Description
+1. **Raw Video Files (`{Testcode}.MP4`):**
+   - **Description:** Raw video files of the column collapse tests taken from two different positions using GoPro cameras at a frame rate of 240 fps. Filenames follow the naming convention outlined above.
 
-Alternatively, you can clone the repository and restructure as necessary. Via 
-the command line,
+2. **Runout Output Files (`{Testcode}.txt`):**
+   - **Description:** Output files containing fluid and particle phase runout and velocity data extracted from image analysis of the raw videos. Data is presented with the following column headings:
+     - Frame: Frame number after column release. Multiplying this value by the frame timestep (i.e. 1/frame rate) will provide the time after collapse initiation for each row of data.
+     - r_f (m) (Cam 1): Average instantaneous runout distance of fluid phase front (Cam 1).
+     - v_f (m/s) (Cam 1): Average instantaneous velocity of fluid phase front (Cam 1).
+     - r_p (m) (Cam 1): Average instantaneous runout distance of particle phase front (Cam 1).
+     - v_p (m/s) (Cam 1): Average instantaneous velocity of particle phase front (Cam 1).
+     - r_f (m) (Cam 2): Average instantaneous runout distance of fluid phase front (Cam 2).
+     - v_f (m/s) (Cam 2): Average instantaneous velocity of fluid phase front (Cam 2).
+     - r_p (m) (Cam 2): Average instantaneous runout distance of particle phase front (Cam 2).
+     - v_p (m/s) (Cam 2): Average instantaneous velocity of particle phase front (Cam 2).
 
-```
-> git clone git@github.com:gchure/reproducible_research
-```
-## Layout
+3. **Pre-collapse Experimental Parameters (`Experimental_Conditions.txt`):**
+   - **Description:** File containing pre-collapse experimental parameters for the tests in this repository. Each test includes the following parameters:
+     - TestCode
+     - N: Gravitational scale factor
+     - rpm: Revolutions per minute of the geotechnical centrifuge
+     - G: Imposed gravitational acceleration (m/s^2)
+     - r_0: Initial column radius (m)
+     - H_p0: Initial height of the particle phase (m)
+     - H_f0: Initial height of the fluid phase (m)
+     - d_p: Inertial particle diameter (m)
+     - rho_p: Inertial particle density (kg/m^3)
+     - phi_p: Average column solid volume fraction prior to collapse
+     - IF: Interstitial test fluid: w for water, g for glycerol-water mixture, k for kaolin suspension
+     - C_m: Mass concentration of the additive to the fluid phase (i.e. glycerol or kaolin) relative to water.
+     - C_v: Volume concentration of the additive to the fluid phase (i.e. glycerol or kaolin) relative to water.
+     - rho_f: Fluid phase density (kg/m^3).
+     - mu_f: Fluid mixture viscosity (kg/m/s). For the non-Newtonian tests (i.e. IF=k), this is a representative viscosity value based on the characteristic shear rate of the collapse (see Thesis Appendix A.3.2).
+     - sigma_f: Fluid surface tension (N/m)
 
-The repository is split into seven main directories, many of which have subdirectories. This structure has been designed to be easily navigable by humans and computers alike, allowing for rapid location of specific files and instructions. Within each directory is a `README.md` file which summarizes the purpose of that directory as well as some examples where necessary. This structure may not be perfect for your intended us and may need to be modified. Each section is briefly described below. 
+### Data Citation
+If you use any data from this repository in your research or publications, please cite the corresponding sources appropriately.
 
-### **`experiments`** 
-Where all of the experimental information lives, including any *executed* code. lives. This includes pipelines, scripts, and figure files. 
- * **`processing`**: Any code used to *transform* the data into another type should live here. This can include everything from parsing of text data, image segmentation/filtering, or simulations.
- * **`analysis`**: Any code to to *draw conclusions* from an experiment or data set. This may include regression, dimensionality reduction, or calculation of various quantities.
- * **`exploratory`**: A sandbox where you keep a record of your different approaches to transformation, interpretation, cleaning, or generation of data.
- * **`figures`**: Any code used to generate figures for your finished work, presentations, or for any other use.
-
-### **`data`** 
-All raw data collected from your experiments as well as copies of the transformed data from your processing code. 
-
-### **`miscellaneous`** 
-Files that may not be code, but are important for reproducibility of your findings.
-* **`protocols`**: A well annotated and general description of your experiments. These protocols should be descriptive enough for someone to follow your experiments independently 
-* **`materials`**: Information regarding the materials used in your experiments or data generation. This could include manufacturer information, records of purity, and/or lot and catalog numbers.
-* **`software details`**: Information about your computational environment that are necessary for others to execute your code. This includes details about your operating system, software version and required packages.
-
-### **`tests`** 
-All test suites for your code. *Any custom code you've written should be thoroughly and adequately tested to make sure you know how it is working.*
-
-### **`software_module`** 
-Custom code you've written that is *not* executed directly, but is called from files in the `code` directory. If you've written your code in Python, for example, this can be the root folder for your custom software module or simply house a file with all of your functions. 
-
-### **`templates`** 
-Files that serve as blank templates that document the procedures taken for each experiment, simulation, or analysis routine. 
-
-### Required Files
-There are some files which I consider to be mandatory for any project.
-
-1. **`LICENSE`**: A legal protection of your work. *It is important to think deeply about the licensing of your work, and is not a decision to be made lightly. See [this useful site](https://choosealicense.com/) for more information about licensing and choosing the correct license for your project.*
-
-2. **`README.md`**: A descriptive yet succinct description of your research project and information regarding the structure outlined below.
-
-# License Information
-
-<p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-  <a rel="license"
-     href="http://creativecommons.org/publicdomain/zero/1.0/">
-    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
-  </a>
-  <br />
-  To the extent possible under law,
-  <a rel="dct:publisher"
-     href="github.com/gchure/reproducible_research">
-    <span property="dct:title">Griffin Chure</span></a>
-  has waived all copyright and related or neighboring rights to
-  <span property="dct:title">A template for using git as a platform for reproducible scientific research</span>.
-This work is published from:
-<span property="vcard:Country" datatype="dct:ISO3166"
-      content="US" about="github.com/gchure/reproducible_research">
-  United States</span>.
-</p>
+### Contact
+For any inquiries or assistance regarding the data, please contact William Webb at williamoscarwebb@gmail.com.
